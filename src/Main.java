@@ -15,11 +15,11 @@ public static void main(String[] args) {
     
     int numOfBicicletas = 26; // random number < all(estacion).capacidad
 
-    // crear 20 bicicletas y distribuirlas aleatoriamente en las estaciones
+    // crear bicicletas y distribuirlas aleatoriamente en las estaciones
     Bicicleta[] bicicletas = new Bicicleta[numOfBicicletas];
     for (int i = 0; i < numOfBicicletas; i++) {
         int estacionIndex = (int) (Math.random() * estaciones.length);
-        bicicletas[i] = new Bicicleta(i, estaciones[estacionIndex]);
+        bicicletas[i] = new Bicicleta(i);
         estaciones[estacionIndex].addBicicleta(bicicletas[i]);
     }
 
@@ -50,9 +50,10 @@ public static void main(String[] args) {
             // seleccionar estacion random para devolver la bici
             int estacionDevolucion = (int)(Math.random()*estaciones.length);
 
+            if (estaciones[estacionDevolucion].tieneEspacio())  //esto tiene que ser algo como un down
             estaciones[estacionDevolucion].devolverBicicleta(bici);
             clientes[clienteRandom].setBicicleta(null);
-        });
+        }).start();
         
         Thread.sleep(1000);
     }
