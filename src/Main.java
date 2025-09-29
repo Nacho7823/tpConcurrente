@@ -1,4 +1,6 @@
 
+
+
 public static void main(String[] args) {
     
     
@@ -25,13 +27,15 @@ public static void main(String[] args) {
 
     // crear camioneta
     Camioneta camioneta = new Camioneta(estaciones);
-    camioneta.start();
-
 
     // Parallel
     new Thread(() -> {
         while(true) {
             camioneta.revisarEstaciones();
+            // buscar estaciones con mayor y menor cantidad de bicis
+            // llevar bicis de la que tiene mas a la que tiene menos
+            // buscar bicicletas que necesitan mantenimiento
+            // llevarlas a mantenimiento
         }
     }).start();
 
@@ -50,9 +54,14 @@ public static void main(String[] args) {
             // seleccionar estacion random para devolver la bici
             int estacionDevolucion = (int)(Math.random()*estaciones.length);
 
+
+            // aca hay q ver si el cliente espera o se va a otra estacion
             if (estaciones[estacionDevolucion].tieneEspacio())  //esto tiene que ser algo como un down
-            estaciones[estacionDevolucion].devolverBicicleta(bici);
+                estaciones[estacionDevolucion].devolverBicicleta(bici);
+
             clientes[clienteRandom].setBicicleta(null);
+
+
         }).start();
         
         Thread.sleep(1000);
