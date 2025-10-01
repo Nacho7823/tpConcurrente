@@ -250,8 +250,8 @@
     {
       "id": "lEJXGNvzp9-__hsygGlAp",
       "type": "rectangle",
-      "x": 718.9971664768005,
-      "y": 583.0274448717959,
+      "x": 710.3114364963318,
+      "y": 594.5702915514834,
       "width": 100.87159269545987,
       "height": 58.12980377902461,
       "angle": 0,
@@ -269,8 +269,8 @@
         "type": 3
       },
       "seed": 253197791,
-      "version": 282,
-      "versionNonce": 234354623,
+      "version": 305,
+      "versionNonce": 660739156,
       "isDeleted": false,
       "boundElements": [
         {
@@ -282,15 +282,15 @@
           "type": "arrow"
         }
       ],
-      "updated": 1759169404906,
+      "updated": 1759340739424,
       "link": null,
       "locked": false
     },
     {
       "id": "2wGNSjPUVxurk2KVwE6GF",
       "type": "text",
-      "x": 746.3274940745305,
-      "y": 602.0923467613081,
+      "x": 737.6417640940617,
+      "y": 613.6351934409956,
       "width": 46.2109375,
       "height": 20,
       "angle": 0,
@@ -306,11 +306,11 @@
       "index": "a7",
       "roundness": null,
       "seed": 340421119,
-      "version": 292,
-      "versionNonce": 952149983,
+      "version": 315,
+      "versionNonce": 742681044,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1759169404906,
+      "updated": 1759340739424,
       "link": null,
       "locked": false,
       "text": "Cliente",
@@ -473,9 +473,9 @@
     {
       "id": "BmDl-kvD3WOwqpvyQGRY_",
       "type": "text",
-      "x": 462.5860025181337,
+      "x": 458.0101739658876,
       "y": 157.6540245378363,
-      "width": 69.3125,
+      "width": 78.46415710449219,
       "height": 20,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -490,11 +490,11 @@
       "index": "aB",
       "roundness": null,
       "seed": 11661951,
-      "version": 279,
-      "versionNonce": 12818655,
+      "version": 280,
+      "versionNonce": 399947628,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1759169404906,
+      "updated": 1759341010995,
       "link": null,
       "locked": false,
       "text": "Camioneta",
@@ -1138,10 +1138,10 @@
     {
       "id": "oyzKtwT8Ak0XiuHu7OaNo",
       "type": "arrow",
-      "x": 772.6843317596484,
-      "y": 581.9713025251219,
-      "width": 57.95082475858885,
-      "height": 100.63362636182296,
+      "x": 766.3192894261124,
+      "y": 594.0370217746788,
+      "width": 54.773377570940966,
+      "height": 114.53078646440957,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "#a5d8ff",
@@ -1157,11 +1157,11 @@
         "type": 2
       },
       "seed": 423491679,
-      "version": 288,
-      "versionNonce": 364620145,
+      "version": 336,
+      "versionNonce": 1564479316,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1759169404912,
+      "updated": 1759340739425,
       "link": null,
       "locked": false,
       "points": [
@@ -1170,8 +1170,8 @@
           0
         ],
         [
-          -57.95082475858885,
-          -100.63362636182296
+          -54.773377570940966,
+          -114.53078646440957
         ]
       ],
       "lastCommittedPoint": null,
@@ -1331,11 +1331,11 @@
         "type": 2
       },
       "seed": 1230225599,
-      "version": 258,
-      "versionNonce": 1096032433,
+      "version": 298,
+      "versionNonce": 1988882540,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1759169404912,
+      "updated": 1759341081741,
       "link": null,
       "locked": false,
       "points": [
@@ -1344,8 +1344,8 @@
           0
         ],
         [
-          244.51236084411016,
-          -32.87892630019883
+          140.7409375042664,
+          -38.70749380508164
         ],
         [
           340.7330501597878,
@@ -1355,12 +1355,12 @@
       "lastCommittedPoint": null,
       "startBinding": {
         "elementId": "WyhQgbtOn_cKHDv9_uKm3",
-        "focus": -0.6118185200542421,
+        "focus": -0.35051753521231366,
         "gap": 3.7219676876188346
       },
       "endBinding": {
         "elementId": "Iofao5JlsUTkFbMG_ci4E",
-        "focus": 0.38984494885136806,
+        "focus": 0.18369401374487246,
         "gap": 7.521375970506824
       },
       "startArrowhead": null,

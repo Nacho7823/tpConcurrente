@@ -46,7 +46,15 @@ public static void main(String[] args) {
             int estacionRandom = (int)(Math.random()*estaciones.length);
 
             // hacemos que el cliente pida una bici de la estacion
-            Bicicleta bici = estaciones[estacionRandom].sacarBicicleta();
+            estaciones[estacionRandom].entrar();
+            if (estaciones[estacionRandom].bicicletasDisponibles() == 0) {
+                estaciones[estacionRandom].salir();
+                return; // no hay bicis, el cliente se va ( corregir despues )
+            }
+            Bicicleta bicicleta = estaciones[estacionRandom].sacarBicicleta();  // aca se el cambia el estado a en uso
+            estaciones[estacionRandom].salir();
+
+            
             clientes[clienteRandom].setBicicleta(bici);
 
             bicicleta.usar(); // esto es para que aumente el uso y cada un tiempo se la manda a mantenimiento
@@ -56,32 +64,23 @@ public static void main(String[] args) {
             int estacionDevolucion = (int)(Math.random()*estaciones.length);
 
             // aca hay q ver si el cliente espera o se va a otra estacion
-            if (Math.random() % 2 == 0) // espera
-            {
-                // region critica
-                // esperar hasta que haya espacio
-                while(!estaciones[estacionDevolucion].tieneEspacio()) {
-                    Thread.sleep(100); // espera un poco antes de volver a chequear
+            boolean encontroEstacion = false;
+            do {
+                estaciones[estacionDevolucion].entrar();
+                if (!estaciones[estacionDevolucion].tieneEspacio()) {
+                    estaciones[estacionDevolucion].salir();
+                    estacionDevolucion = (int)(Math.random()*estaciones.length);
                 }
-                // devolver bici
-                estaciones[estacionDevolucion].devolverBicicleta(bici);
-                clientes[clienteRandom].setBicicleta(null);
+                else {
+                    encontroEstacion = true;
+                }
+            } while(!encontroEstacion);
+            
+            estaciones[estacionDevolucion].devolverBicicleta(bicleta);
 
-                // region critica
-            }
-            else {  // se va a otra estacion
-                {
-                    // region critica
-                    while(!estaciones[estacionDevolucion].tieneEspacio()) {
-                        estacionDevolucion = (int)(Math.random()*estaciones.length);
-                    }
-                    // guardar
-                    estaciones[estacionDevolucion].devolverBicicleta(bici);
-                    clientes[clienteRandom].setBicicleta(null);
-                    
-                    // region critica
-                }
-            }
+            clientes[clienteRandom].setBicicleta(null);
+
+            estaciones[estacionDevolucion].salir();
 
 
         }).start();

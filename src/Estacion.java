@@ -12,6 +12,14 @@ public class Estacion {
         bicicletas = new LinkedList<>();
     }
 
+
+    public void entrar() {
+        // mutex down
+    }
+    public void salir() {
+        // mutex up
+    }
+
     public Bicicleta sacarBicicleta() {
         // mutex
         Bicicleta bici = bicicletas.poll();
